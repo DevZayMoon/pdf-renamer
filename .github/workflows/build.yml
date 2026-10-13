@@ -39,7 +39,8 @@ jobs:
       - name: Gerar o executável
         shell: cmd
         run: >
-          pyinstaller --noconfirm --onefile --windowed --name PDFRenamer
+          pyinstaller --noconfirm --clean --onefile --windowed
+          --name PDFRenamer
           --collect-all customtkinter
           --add-binary "C:\Program Files\Tesseract-OCR\*;tesseract"
           --add-data "C:\Program Files\Tesseract-OCR\tessdata\por.traineddata;tesseract\tessdata"
